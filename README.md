@@ -11,11 +11,12 @@
 * Update `*.conf.js` files inside the `conf/` directory with your BrowserStack Username and Access Key(https://www.browserstack.com/accounts/settings)
 
 ## Running your tests
-- To run a single test, run `npm run single`
-- To run local tests, run `npm run local`
-- To run parallel tests, run `npm run parallel`
 
- Understand how many parallel sessions you need by using our [Parallel Test Calculator](https://www.browserstack.com/automate/parallel-calculator?ref=github)
+- To run multiple modules of tests, split your test functions and place them in seperate .js files in either 'single' or 'suite' folder.
+  Placing you .js files in single folder will execute your tests in sequential fashion and placing your .js test files in suite folder will execute your tests in parallel fashion
+
+- To run tests in single folder, execute command `npm run single`
+- To run tests in suite folder, execute command `npm run suite`    
 
 ## Notes
 * You can view your test results on the [BrowserStack automate dashboard](https://www.browserstack.com/automate)
