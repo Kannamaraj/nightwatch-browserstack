@@ -1,5 +1,7 @@
 nightwatch_config = {
-  src_folders : [ "tests/single" ],
+  src_folders : [ 'tests/single' ],
+  page_objects_path: ['tests/pages'],
+
 
   selenium : {
     "start_process" : false,
@@ -14,7 +16,9 @@ nightwatch_config = {
         'browserstack.user': process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
         'browserstack.key': process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACCESS_KEY',
         'browserstack.debug': true,
-        'browser': 'chrome'
+        'browser': 'chrome',
+        'os':'windows',
+        'os_version':'10'
       }
     }
   }

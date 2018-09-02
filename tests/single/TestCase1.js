@@ -1,11 +1,15 @@
 module.exports = {
-  'Google\'s Search Functionality' : function (browser) {
+  'Github login Functionality' : function (browser) {
+
+//create an object for login
+var login = browser.page.login();
+//execute the login method from //tests/pages/login.js file
+login.navigate().login();
+
+//You can continue with your tests below:
+// Also, you can use similar Page objects to increase reusability
     browser
-      .url('https://www.google.com/ncr')
-      .waitForElementVisible('body', 1000)
-      .setValue('input[type=text]', 'BrowserStack\n')
-      .pause(1000)
-      .assert.title('BrowserStack - Google Search')
+    .pause(3000)
       .end();
   }
 };
